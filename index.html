@@ -1,22 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>Page Title</title>
+    <title>R2-D2 | Responsive Redesign </title>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
-    <div
-      class="header-container"
-    > 
-      <div
-        class="header-options"
-      >
+    <div class="header-container" > 
+      <div class="header-options" >
         <p class="h5 navbar-title"> Wookieepedia </p>
         <a class="navbar-option"> EXPLORE </a>
         <a class="navbar-option"> TRENDING </a>
@@ -27,11 +23,25 @@
       <input aria-label="search bar" class="form-control search" placeholder="Search Wookieepedia...">
     </div>
 
+
     <div class="content">
+    <div id="banner">
+      <img class="banner-image" src="banner.jpg" aria-label="ad-banner"/>
+      <h6 class="adlabel"> Advertisement </h6>
+      <button class="close-btn" onclick="hideAdBanner()">
+        <span class="material-symbols-outlined" style="margin-right: 8px"> close </span>
+      </button>
+    </div>
       <div class="column-container">
         <div class="outline"></div>
-        <div class="article">
-          <h2 class="article-title" id="r2-d2"> R2-D2 </h2>
+        <div class="article" style="padding-bottom: 0px">
+          <div class="article-title">
+          <h2 id="r2-d2" style="display:inline; margin: 0px 24px 0px 0px"> R2-D2 </h2>
+          <button class="btn" style="display: flex; align-items: center; padding: 8px">
+            <span class="material-symbols-outlined" style="margin-right: 8px"> edit </span>
+            Edit Article
+          </button>
+          </div>
         </div>
         <div class="related"></div>
       </div>
@@ -43,11 +53,19 @@
             <a class="outline-section l1" id="toc_r2-d2" onclick="scrollIn('r2-d2')"> R2-D2 </a>
             <a class="outline-section l2" id="toc_biography" onclick="scrollIn('biography')"> Biography </a>
             <a class="outline-section l3" id="toc_serving-padme-amidala" onclick="scrollIn('serving-padme-amidala')"> Serving Padme Amidala </a>
+            <a class="outline-section l3" id="toc_the-clone-wars" onclick="scrollIn('the-clone-wars')"> The Clone Wars </a>
+            <a class="outline-section l4" id="toc_genesis-of-the-clone-wars" onclick="scrollIn('genesis-of-the-clone-wars')"> Genesis of the Clone Wars </a>
+            <a class="outline-section l4" id="toc_the-defense-of-christophsis" onclick="scrollIn('the-defense-of-christophsis')"> The Defense of Christophsis </a>
+            <a class="outline-section l2" id="toc_characteristics" onclick="scrollIn('characteristics')"> Characteristics </a>
+            <a class="outline-section l3" id="toc_a-loyal-droid" onclick="scrollIn('a-loyal-droid')"> A loyal droid </a>
+            <a class="outline-section l3" id="toc_relationships" onclick="scrollIn('relationships')"> Relationships </a>
+            <a class="outline-section l4" id="toc_c-3po" onclick="scrollIn('c-3po')"> C-3PO </a>
+            <a class="outline-section l4" id="toc_clone-wars-era-skywalker-family" onclick="scrollIn('clone-wars-era-skywalker-family')"> Clone Wars-era Skywalker family </a>
           </div>
         </div>
         <div class="article">
           <div class="profile">
-            <img class="profile-image" src="r2d2.webp"/>
+            <img class="profile-image" src="r2d2.webp" aria-label="r2d2"/>
             <table>
               <tr> <th class="table-title" colspan="2" style="width: 45%"> R2-D2  </th></tr>
               <tr> <th class="table-subsection" colspan="2"> Production information </th></tr>
@@ -63,6 +81,35 @@
                 <td class="table-entry"> Date destroyed </td>
                 <td class="table-entry"> Between 20 BBY and 19 BBY, Carida System (rebuilt) </td>
               </tr>
+              <tr> 
+                <td class="table-entry-alt"> Manufacturer </td>
+                <td class="table-entry-alt"> Industrial Automation </td>
+              </tr>
+              <tr> 
+                <td class="table-entry"> Product line </td>
+                <td class="table-entry"> R-series </td>
+              </tr>
+              <tr> <th class="table-subsection" colspan="2"> Technical specifications </th></tr>
+              <tr> 
+                <td class="table-entry"> Height </td>
+                <td class="table-entry"> 1.08 meters </td>
+              </tr>
+              <tr> 
+                <td class="table-entry-alt"> Mass </td>
+                <td class="table-entry-alt"> 32 kilograms </td>
+              </tr>
+              <tr> 
+                <td class="table-entry"> Gender </td>
+                <td class="table-entry"> Masculine programming </td>
+              </tr>
+              <tr> 
+                <td class="table-entry-alt"> Sensor color </td>
+                <td class="table-entry-alt"> Black </td>
+              </tr>
+              <tr> 
+                <td class="table-entry"> Plating color </td>
+                <td class="table-entry"> <ul style="margin: 0; padding-left: 16px"> <li> Blue </li> <li> Silver </li> <li> White </li> </ul> </td>
+              </tr>
             </table>
           </div>
           <p>
@@ -77,13 +124,39 @@
           <p>
             Following his reawakening after the Battle of Starkiller Base, R2 went on to accompany the Force-sensitive scavenger Rey on her journey to train under Luke Skywalker on Ahch-To, where the droid was reunited with his old master. R2-D2 continued to aid the Resistance alongside his longtime counterpart C-3PO throughout the First Order-Resistance War, culminating in a decisive victory at the Battle of Exegol, in which he was an active participant. 
           </p>
-          <img src="" aria-label="advertisement"/>
-          <h4 class="section-header" id="biography"> Biography </h4>
-          <h5 class="subsection-header" id="serving-padme-amidala"> Serving Padme Amidala </h5>
+          <p class="h5">Advertisement</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" aria-label="advertisement rickroll"></iframe>
+          <h3 class="section-header" id="biography"> Biography </h3>
+          <h4 class="subsection-header" id="serving-padme-amidala"> Serving Padme Amidala </h4>
           <p>
             R2-D2 was one of several astromech droids on Queen Padme Amidala's Naboo Royal Starship during the invasion of Naboo by the Trade Federation. The ship was used by Queen Amidala and her entourage in an attempt to pass the blockade and escape the planet. Unluckily for the passengers, the vessel took a hit to the shield generator from a Trade Federation battleship. The four astromechs were sent out to repair the ship, but only R2-D2 survived - the rest were pulverized by stray blaster fire. R2-D2 was able to bring the shields online by bypassing the main power drive, allowing the ship to narrowly escape into hyperspace.
 
             As the ship traveled to Tatooine, R2-D2 was taken before Sabe, the Queen's decoy in the guise of Amidala, where he was commended for his actions. The ship landed on Tatooine without any further incidents, although the voyage fried the hyperdrive. R2-D2 accompanied Jedi Master Qui-Gon Jinn, Gungan exile Jar Jar Binks, and Padme, the queen in disguise, to the city of Mos Espa to find a replacement. In the junk shop of the Toydarian merchant Watto they found they could not afford a replacement hyperdrive and later took shelter from a sandstorm in the home of Watto's slaves, a boy named Anakin Skywalker, and his mother, Shmi.
+          </p>
+          <h4 class="subsection-header" id="the-clone-wars"> The Clone Wars </h4>
+          <h5 class="subsection-header" id="genesis-of-the-clone-wars"> Genesis of the Clone Wars </h5>
+          <p>
+            R2-D2 was one of several astromech droids on Queen Padme Amidala's Naboo Royal Starship during the invasion of Naboo by the Trade Federation. The ship was used by Queen Amidala and her entourage in an attempt to pass the blockade and escape the planet. Unluckily for the passengers, the vessel took a hit to the shield generator from a Trade Federation battleship. The four astromechs were sent out to repair the ship, but only R2-D2 survived - the rest were pulverized by stray blaster fire. R2-D2 was able to bring the shields online by bypassing the main power drive, allowing the ship to narrowly escape into hyperspace.
+
+            As the ship traveled to Tatooine, R2-D2 was taken before Sabe, the Queen's decoy in the guise of Amidala, where he was commended for his actions. The ship landed on Tatooine without any further incidents, although the voyage fried the hyperdrive. R2-D2 accompanied Jedi Master Qui-Gon Jinn, Gungan exile Jar Jar Binks, and Padme, the queen in disguise, to the city of Mos Espa to find a replacement. In the junk shop of the Toydarian merchant Watto they found they could not afford a replacement hyperdrive and later took shelter from a sandstorm in the home of Watto's slaves, a boy named Anakin Skywalker, and his mother, Shmi.
+          </p>
+          <h5 class="subsection-header" id="the-defense-of-christophsis"> The Defense of Christophsis </h5>
+          <p>
+            Following the outbreak of the Clone Wars, R2-D2 accompanied Skywalker and Master Kenobi - who had both been promoted to the position of Jedi General - during the defense of the planet Christophsis against a besieging Separatist army led by Admiral Trench. When Clone Commander Cody and Clone Captain Rex discovered a spy among their number, R2-D2 helped to ferret out the traitor by monitoring his transmissions. The droid's work led to the arrest of Clone Sergeant Slick, who was identified as the traitor. During the subsequent battle, the Jedi and Clones managed to defeat the Separatist army by sabotaging their shield generator, which exposed them to Republic artillery. The Republic forces were also aided by the arrival of Ahsoka Tano, Skywalker's newly designated Togruta Padawan.
+          </p>
+          <h3 class="section-header" id="characteristics"> Characteristics </h3>
+          <h4 class="subsection-header" id="a-loyal-droid"> A loyal droid </h4>
+          <p>
+            R2-D2 was known for his loyal, courageous, and assertive personality. Over the years, R2-D2 had served several masters diligently including the Royal House of Naboo, Senator Padme Amidala, the Jedi Knight Anakin Skywalker, Senator Bail Organa, and Anakin's son, Luke Skywalker. While R2-D2 was not designed for combat, R2-D2 was still able to hold his own in a fight on several occasions during the Clone Wars and the Galactic Civil War. Unlike his fastidious and worry-prone protocol counterpart C-3PO, R2-D2 had an adventurous spirit and was able to cope well under challenging circumstances. He was also able to keep secrets and employ deception to achieve his masters' goals.
+          </p>
+          <h4 class="subsection-header" id="relationships"> Relationships </h4>
+          <h5 class="subsection-header" id="c-3po"> C-3PO </h4>
+          <p>
+            First meeting him on Tatooine during the Naboo Crisis before truly befriending him during the Battle of Geonosis, C-3PO was R2-D2's best friend. Even though the two could easily argue and disagree, they both deeply cared about each other.
+          </p>
+          <h5 class="subsection-header" id="clone-wars-era-skywalker-family"> Clone Wars-era Skywalker family </h4>
+          <p>
+            After first meeting R2 during the Naboo crisis, R2 was given to Anakin Skywalker by Padme Amidala as a wedding present. Skywalker viewed R2 as more than a droid, considering his loyal companion a friend. Amidala also cared for R2, viewing him as a hero of Naboo and viewing him as a loyal ally who made her smile. During the Clone Wars, R2 was Skywalker's faithful co-pilot. R2's loyalty to Skywalker made him stay even after he fell to the dark side. He believed Skywalker died on Mustafar after his duel with Obi-Wan Kenobi.
           </p>
         </div>
         <div class="related">
@@ -91,7 +164,7 @@
             <p class="h5"> Others like you also viewed </p>
             <div class="related-article">
               <img class="article-img" src="c-3po.jpg" aria-label="c3po article icon"/>
-              <a> C-3P0 </a>
+              <a> C-3PO </a>
             </div>
             <div class="related-article">
               <img class="article-img" src="anakin.webp" aria-label="c3po article icon"/>
@@ -100,6 +173,11 @@
             <div class="related-article">
               <img class="article-img" src="luke.jpeg" aria-label="c3po article icon"/>
               <a> Luke Skywalker </a>
+            </div>
+            <div style="display: flex; margin-top: 64px; justify-content: center">
+              <div class="vertical" aria-label="vertical">
+                <h6 class="adlabel-2"> Advertisement </h6>
+              </div>
             </div>
           </div>
         </div>
