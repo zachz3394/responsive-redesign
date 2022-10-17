@@ -1,12 +1,15 @@
 function expandAndScrollIn(toExpand, toScroll) {
   if (!(toExpand === '')) {
     const collapsible = document.getElementById(toExpand);
-    collapsible.addEventListener('shown.bs.collapse', function() {
+    try {
+      bootstrap.Collapse.getInstance(collapsible).show();
+      collapsible.addEventListener('shown.bs.collapse', function() {
+        scrollIn(toScroll);
+      }, {once: true});
+    } catch (e) {
       scrollIn(toScroll);
-    }, {once: true});
-    bootstrap.Collapse.getOrCreateInstance(collapsible).show();
+    }
   }
-  scrollIn(toScroll);
 }
 
 function scrollIn(id) {
