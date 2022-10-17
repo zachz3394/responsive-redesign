@@ -1,3 +1,14 @@
+function expandAndScrollIn(toExpand, toScroll) {
+  if (!(toExpand === '')) {
+    const collapsible = document.getElementById(toExpand);
+    collapsible.addEventListener('shown.bs.collapse', function() {
+      scrollIn(toScroll);
+    }, {once: true});
+    bootstrap.Collapse.getOrCreateInstance(collapsible).show();
+  }
+  scrollIn(toScroll);
+}
+
 function scrollIn(id) {
   document.getElementById(id).scrollIntoView({
     behavior: 'auto',
