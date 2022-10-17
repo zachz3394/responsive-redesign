@@ -1,0 +1,185 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
+  font-family: rubik, helvetica, arial, sans-serif;
+  background-image: url('anewhope.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar-option {
+  margin: 0px 16px 0px 16px;
+  font-weight: bold;
+  font-size: 75%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.navbar-title {
+  margin: 0px 16px 0px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.navbar-option:hover, .navbar-title:hover {
+  color: #ffddaa;
+}
+
+.search {
+  background-color: white;
+  background-image: url('search.png');
+  background-position: 10px 5px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  max-width: 300px;
+  height: 32px
+}
+
+.header-container {
+  width: 100%; height: 48px; background-color: #8c1a19; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; box-sizing: border-box; position: fixed; top: 0;
+}
+
+.header-options {
+  display: flex; justify-content: flex-start; color: white; align-items: center
+}
+
+.content {
+  margin: 60px auto;
+  padding: 60px 0px;
+  max-width: 1600px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.column-container {
+  display: flex;
+}
+
+.outline {
+  flex: 2;
+  padding: 16px;
+}
+
+.outline-container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 60px;
+}
+
+.article {
+  flex: 7;
+}
+
+.related {
+  flex: 2;
+  padding: 16px;
+}
+
+.related-container {
+  position: sticky;
+  top: 60px;
+}
+
+.profile-image {
+  max-width: 250px;
+  display: block;
+}
+
+.profile {
+  float: right;
+  max-width: 260px;
+  margin: 16px;
+}
+
+.article-title {
+  margin: 24px 0px 24px;
+  scroll-margin-top: 60px;
+}
+
+td {
+  font-size: 85%;
+}
+
+.table-title {
+  background-color: #8c1a19;
+  text-align: center;
+  color: white;
+}
+
+.table-subsection {
+  background-color: #ffddaa;
+  padding: 4px 8px;
+}
+
+.table-entry {
+  background-color: #e2e2e2;
+  padding: 4px 8px;
+}
+
+.table-entry-alt {
+  background-color: #fafafa;
+  padding: 4px 8px;
+}
+
+p {
+  line-height: 180%;
+}
+
+.section-header {
+  margin: 24px 0px;
+  scroll-margin-top: 60px;
+}
+
+.subsection-header {
+  margin: 12px 0px;
+  scroll-margin-top: 60px;
+}
+
+.outline-section {
+  text-decoration: none;
+  color: black;
+  padding: 0px 8px;
+  margin: 2px;
+}
+
+.outline-section:hover {
+  background-color: #8c1a19;
+  border-radius: 5px;
+  color: white;
+}
+
+.active {
+  background-color: #ba7575;
+  border-radius: 5px;
+}
+
+.l1 {
+  margin-left: 0px;
+}
+
+.l2 {
+  margin-left: 16px;
+}
+
+.l3 {
+  margin-left: 24px;
+}
+
+.article-img {
+  width: 72px;
+  height: 72px;
+  margin: 16px 16px 16px 0px;
+  object-fit: cover;
+}

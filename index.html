@@ -4,151 +4,47 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <style>
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48
-    }
-
-    body {
-      font-family: rubik, helvetica, arial, sans-serif;
-      background-image: url('anewhope.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .navbar-option {
-      margin: 0px 16px 0px 16px;
-      font-weight: bold;
-      font-size: 75%;
-    }
-    
-    .navbar-title {
-      margin: 0px 16px 0px 16px;
-      font-weight: bold;
-    }
-
-    .search {
-      background-color: white;
-      background-image: url('search.png');
-      background-position: 10px 5px;
-      background-size: 20px;
-      background-repeat: no-repeat;
-      padding-left: 40px;
-      max-width: 300px;
-      height: 32px
-    }
-
-    .header-container {
-      width: 100%; height: 48px; background-color: #8c1a19; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; box-sizing: border-box; position: fixed; top: 0;
-    }
-
-    .header-options {
-      display: flex; justify-content: flex-start; color: white; align-items: center
-    }
-
-    .content {
-      margin: 60px auto;
-      max-width: 1400px;
-      background-color: white;
-      border-radius: 5px;
-    }
-
-    .column-container {
-      display: flex;
-    }
-
-    .outline {
-      flex: 2;
-    }
-
-    .article {
-      flex: 7;
-    }
-
-    .popular {
-      flex: 2;
-    }
-
-    .profile-image {
-      max-width: 250px;
-      display: block;
-    }
-
-    .profile {
-      float: right;
-      max-width: 260px;
-      margin: 16px;
-    }
-
-    .article-title {
-      margin: 48px 0px 24px;
-    }
-
-    td {
-      font-size: 85%;
-    }
-
-    .table-title {
-      background-color: #8c1a19;
-      text-align: center;
-      color: white;
-    }
-
-    .table-subsection {
-      background-color: #ffddaa;
-      padding: 4px 8px;
-    }
-
-    .table-entry {
-      background-color: #e2e2e2;
-      padding: 4px 8px;
-    }
-
-    .table-entry-alt {
-      background-color: #fafafa;
-      padding: 4px 8px;
-    }
-
-    p {
-      line-height: 180%;
-    }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <title>Page Title</title>
   </head>
   <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
     <div
       class="header-container"
     > 
       <div
         class="header-options"
       >
-        <h5 class="navbar-title"> Wookieepedia </h5>
-        <p class="navbar-option"> EXPLORE </p>
-        <p class="navbar-option"> TRENDING </p>
-        <p class="navbar-option"> STAR WARS </p>
-        <p class="navbar-option"> NAVIGATION </p>
-        <p class="navbar-option"> COMMUNITY </p>
+        <p class="h5 navbar-title"> Wookieepedia </p>
+        <a class="navbar-option"> EXPLORE </a>
+        <a class="navbar-option"> TRENDING </a>
+        <a class="navbar-option"> STAR WARS </a>
+        <a class="navbar-option"> NAVIGATION </a>
+        <a class="navbar-option"> COMMUNITY </a>
       </div>
-      <input class="form-control search" placeholder="Search Wookieepedia...">
+      <input aria-label="search bar" class="form-control search" placeholder="Search Wookieepedia...">
     </div>
 
     <div class="content">
       <div class="column-container">
-        <div class="outline"> </div>
+        <div class="outline"></div>
         <div class="article">
-          <h2 class="article-title"> R2-D2 </h2>
+          <h2 class="article-title" id="r2-d2"> R2-D2 </h2>
         </div>
-        <div class="popular"> </div>
+        <div class="related"></div>
       </div>
+
       <div class="column-container">
         <div class="outline">
+          <div class="outline-container">
+            <p class="h5" style="margin-bottom: 16px"> Table of Contents </p>
+            <a class="outline-section l1" id="toc_r2-d2" onclick="scrollIn('r2-d2')"> R2-D2 </a>
+            <a class="outline-section l2" id="toc_biography" onclick="scrollIn('biography')"> Biography </a>
+            <a class="outline-section l3" id="toc_serving-padme-amidala" onclick="scrollIn('serving-padme-amidala')"> Serving Padme Amidala </a>
+          </div>
         </div>
-
         <div class="article">
           <div class="profile">
             <img class="profile-image" src="r2d2.webp"/>
@@ -177,14 +73,35 @@
           </p>
           <p>
             In the subsequent thirty years, R2 accompanied Luke Skywalker until the undoing of his attempted resurrection of the Jedi Order in 28 ABY. Following Luke's disappearance, R2 entered a self-imposed low power mode as newer droid models started to out-compute the aging astromech. Despite this, his celebrated role in the Rebellion protected him from the usual recycling procedure of many old droids, allowing him a semi-retirement in the Resistance as he pored over several decades of uninterrupted data, and "dreamed" of his greatest adventures.
-
           </p>
           <p>
             Following his reawakening after the Battle of Starkiller Base, R2 went on to accompany the Force-sensitive scavenger Rey on her journey to train under Luke Skywalker on Ahch-To, where the droid was reunited with his old master. R2-D2 continued to aid the Resistance alongside his longtime counterpart C-3PO throughout the First Order-Resistance War, culminating in a decisive victory at the Battle of Exegol, in which he was an active participant. 
           </p>
-        </div>
+          <img src="" aria-label="advertisement"/>
+          <h4 class="section-header" id="biography"> Biography </h4>
+          <h5 class="subsection-header" id="serving-padme-amidala"> Serving Padme Amidala </h5>
+          <p>
+            R2-D2 was one of several astromech droids on Queen Padme Amidala's Naboo Royal Starship during the invasion of Naboo by the Trade Federation. The ship was used by Queen Amidala and her entourage in an attempt to pass the blockade and escape the planet. Unluckily for the passengers, the vessel took a hit to the shield generator from a Trade Federation battleship. The four astromechs were sent out to repair the ship, but only R2-D2 survived - the rest were pulverized by stray blaster fire. R2-D2 was able to bring the shields online by bypassing the main power drive, allowing the ship to narrowly escape into hyperspace.
 
-        <div class="popular">
+            As the ship traveled to Tatooine, R2-D2 was taken before Sabe, the Queen's decoy in the guise of Amidala, where he was commended for his actions. The ship landed on Tatooine without any further incidents, although the voyage fried the hyperdrive. R2-D2 accompanied Jedi Master Qui-Gon Jinn, Gungan exile Jar Jar Binks, and Padme, the queen in disguise, to the city of Mos Espa to find a replacement. In the junk shop of the Toydarian merchant Watto they found they could not afford a replacement hyperdrive and later took shelter from a sandstorm in the home of Watto's slaves, a boy named Anakin Skywalker, and his mother, Shmi.
+          </p>
+        </div>
+        <div class="related">
+          <div class="related-container">
+            <p class="h5"> Others like you also viewed </p>
+            <div class="related-article">
+              <img class="article-img" src="c-3po.jpg" aria-label="c3po article icon"/>
+              <a> C-3P0 </a>
+            </div>
+            <div class="related-article">
+              <img class="article-img" src="anakin.webp" aria-label="c3po article icon"/>
+              <a> Anakin Skywalker </a>
+            </div>
+            <div class="related-article">
+              <img class="article-img" src="luke.jpeg" aria-label="c3po article icon"/>
+              <a> Luke Skywalker </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
