@@ -9,6 +9,8 @@ function expandAndScrollIn(toExpand, toScroll) {
     } catch (e) {
       scrollIn(toScroll);
     }
+  } else {
+    scrollIn(toScroll);
   }
 }
 
