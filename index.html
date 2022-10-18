@@ -15,22 +15,25 @@
     <script src="scripts.js"></script>
     <div class="header-container" > 
       <div class="header-options" >
-        <img src="wookie-logo.webp" aria-label="wookieepedia logo" style="height: 36px; width: 36px; cursor: pointer"/>
-        <p class="h5 navbar-title"> Wookieepedia </p>
+        <img id="wookie-logo" src="wookie-logo.webp" aria-label="wookieepedia logo" style="height: 36px; width: 36px; cursor: pointer"/>
+        <p id="wookie" class="h5 navbar-title"> Wookieepedia </p>
         <a class="navbar-option"> EXPLORE </a>
         <a class="navbar-option"> TRENDING </a>
         <a class="navbar-option"> STAR WARS </a>
         <a class="navbar-option"> NAVIGATION </a>
         <a class="navbar-option"> COMMUNITY </a>
       </div>
-      <input aria-label="search bar" class="form-control search" placeholder="Search Wookieepedia...">
+      <button onclick="toggleSearch()" style="margin-top: 4px; background-color: transparent; border-style: none">
+        <span class="material-symbols-outlined" id="search-icon"> search </span>
+      </button>
+      <input aria-label="search bar" class="form-control" id="search-bar" placeholder="Search Wookieepedia...">
     </div>
 
 
     <div class="content">
     <div id="banner">
       <img class="banner-image" src="banner.jpg" aria-label="ad-banner"/>
-      <h6 class="adlabel"> Advertisement </h6>
+      <p class="h6 adlabel"> Advertisement </p>
       <button class="close-btn" onclick="hideAdBanner()">
         <span class="material-symbols-outlined" style="margin-right: 8px"> close </span>
       </button>
@@ -132,14 +135,14 @@
             Following his reawakening after the Battle of Starkiller Base, R2 went on to accompany the Force-sensitive scavenger Rey on her journey to train under Luke Skywalker on Ahch-To, where the droid was reunited with his old master. R2-D2 continued to aid the Resistance alongside his longtime counterpart C-3PO throughout the First Order-Resistance War, culminating in a decisive victory at the Battle of Exegol, in which he was an active participant. 
           </p>
           <p class="h5">Advertisement</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" aria-label="advertisement rickroll"></iframe>
+          <iframe style="max-width: 500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" aria-label="advertisement rickroll"></iframe>
           <div class="table-of-contents">
             <a style="color: black; text-decoration: none; margin: 4px; display: flex; align-items: center; justify-content: space-between" data-bs-toggle="collapse" href="#table-of-contents-collapse">
               <div>
                 <span id="table-of-contents-arrow" class="material-symbols-outlined">
                   keyboard_arrow_down
                 </span>
-                <h4 id="table-of-contents" class="section-title" style="margin-top: 8px"> Contents </h4>
+                <p id="table-of-contents" class="h4 section-title" style="margin-top: 8px"> Contents </p>
               </div>
               <span id="table-of-contents-arrow" class="material-symbols-outlined" style="margin-right: 16px">
                 list
@@ -229,7 +232,7 @@
             </div>
             <div style="display: flex; margin-top: 64px; justify-content: center">
               <div class="vertical" aria-label="vertical">
-                <h6 class="adlabel-2"> Advertisement </h6>
+                <p class="h6 adlabel-2"> Advertisement </p>
               </div>
             </div>
           </div>

@@ -57,3 +57,18 @@ function toggleOutline() {
     document.getElementById('outline-container').style.display = 'none';
   }
 }
+
+function toggleSearch() {
+  const searchIcon = document.getElementById('search-icon');
+  if (searchIcon.innerHTML === 'search') {
+    document.getElementById('search-bar').style.display = 'inline';
+    document.getElementById('wookie-logo').style.display = 'none';
+    document.getElementById('wookie').style.display = 'none';
+    searchIcon.innerHTML = 'close';
+  } else {
+    document.getElementById('search-bar').style.display = 'none';
+    document.getElementById('wookie-logo').style.display = 'inline';
+    document.getElementById('wookie').style.display = 'inline';
+    searchIcon.innerHTML = 'search';
+  }
+}
