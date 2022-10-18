@@ -14,6 +14,7 @@
     <script src="scripts.js"></script>
     <div class="header-container" > 
       <div class="header-options" >
+        <img src="wookie-logo.webp" aria-label="wookieepedia logo" style="height: 36px; width: 36px; cursor: pointer"/>
         <p class="h5 navbar-title"> Wookieepedia </p>
         <a class="navbar-option"> EXPLORE </a>
         <a class="navbar-option"> TRENDING </a>
@@ -127,9 +128,9 @@
           </p>
           <p class="h5">Advertisement</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" aria-label="advertisement rickroll"></iframe>
-          <a class="section-header" data-bs-toggle="collapse" data-bs-target="#biography-collapse">
-            <span class="material-symbols-outlined">
-              keyboard_arrow_down
+          <a class="section-header" data-bs-toggle="collapse" href="#biography-collapse">
+            <span id="biography-arrow" class="material-symbols-outlined">
+              keyboard_arrow_up
             </span>
             <h3 id="biography" class="section-title"> Biography </h3>
           </a>
@@ -153,9 +154,9 @@
               Following the outbreak of the Clone Wars, R2-D2 accompanied Skywalker and Master Kenobi - who had both been promoted to the position of Jedi General - during the defense of the planet Christophsis against a besieging Separatist army led by Admiral Trench. When Clone Commander Cody and Clone Captain Rex discovered a spy among their number, R2-D2 helped to ferret out the traitor by monitoring his transmissions. The droid's work led to the arrest of Clone Sergeant Slick, who was identified as the traitor. During the subsequent battle, the Jedi and Clones managed to defeat the Separatist army by sabotaging their shield generator, which exposed them to Republic artillery. The Republic forces were also aided by the arrival of Ahsoka Tano, Skywalker's newly designated Togruta Padawan.
             </p>
           </div>
-          <a class="section-header" data-bs-toggle="collapse" data-bs-target="#characteristics-collapse">
-            <span class="material-symbols-outlined">
-              keyboard_arrow_down
+          <a class="section-header" data-bs-toggle="collapse" href="#characteristics-collapse">
+            <span id="characteristics-arrow" class="material-symbols-outlined">
+              keyboard_arrow_up
             </span>
             <h3 id="characteristics" class="section-title"> Characteristics </h3>
           </a>
@@ -199,15 +200,17 @@
           </div>
         </div>
       </div>
+      <div class="footer">
+        <img aria-label="fandom logo" class="logo" src="fandom.webp"/>
+        <a class="h5 footer-option"> Explore Properties </a>
+        <a class="h5 footer-option"> Overview </a>
+        <a class="h5 footer-option"> Community </a>
+        <a class="h5 footer-option"> Advertise </a>
+      </div>
     </div>
 
-    <div class="footer">
-      <img aria-label="fandom logo" class="logo" src="fandom.webp"/>
-      <h5 class="footer-option"> Explore Properties </h5>
-      <h5 class="footer-option"> Overview </h5>
-      <h5 class="footer-option"> Community </h5>
-      <h5 class="footer-option"> Advertise </h5>
-    </div>
+
+    <script src="arrows.js"></script>
   </body>
 </html>
 

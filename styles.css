@@ -6,6 +6,15 @@
   'opsz' 48
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: white;
+}
+
 body {
   font-family: rubik, helvetica, arial, sans-serif;
   background-image: url('anewhope.jpg');
@@ -13,13 +22,57 @@ body {
   background-attachment: fixed;
 }
 
-.navbar-option {
-  margin: 0px 16px 0px 16px;
-  font-weight: bold;
-  font-size: 75%;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: white;
+@media only screen and (min-width: 1200px) {
+  .navbar-option {
+    margin: 0px 16px 0px 16px;
+    font-weight: bold;
+    font-size: 75%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .outline {
+    flex: 2;
+    padding: 16px;
+    background-color: #f2f2f2;
+  }
+
+  .outline-container {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 60px;
+    overflow-y: auto;
+    height: calc(100vh - 108px);
+  }
+
+  .related {
+    flex: 2;
+    padding: 16px;
+    background-color: #f2f2f2;
+  }
+
+  .related-container {
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 108px);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-option {
+    display: none;
+  } 
+
+  .outline {
+    display: none;
+  }
+
+  .related {
+    display: none;
+  }
 }
 
 .navbar-title {
@@ -53,47 +106,18 @@ body {
 }
 
 .content {
-  margin: 48px auto;
+  margin: 48px auto 0px;
   max-width: 1600px;
   background-color: white;
-  border-radius: 5px;
 }
 
 .column-container {
   display: flex;
 }
 
-.outline {
-  flex: 2;
-  padding: 16px;
-  background-color: #f2f2f2;
-}
-
-.outline-container {
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  top: 60px;
-  overflow-y: auto;
-  height: calc(100vh - 108px);
-}
-
 .article {
   flex: 7;
   padding: 16px;
-}
-
-.related {
-  flex: 2;
-  padding: 16px;
-  background-color: #f2f2f2;
-}
-
-.related-container {
-  position: sticky;
-  top: 60px;
-  height: calc(100vh - 108px);
 }
 
 .profile-image {
@@ -293,4 +317,8 @@ p {
   font-size: 75%;
   margin: 24px;
   font-weight: bold;
+}
+
+.related-article {
+  cursor: pointer;
 }

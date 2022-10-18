@@ -2,16 +2,17 @@ function expandAndScrollIn(toExpand, toScroll) {
   if (!(toExpand === '')) {
     const collapsible = document.getElementById(toExpand);
     try {
+      const scroll = () => {scrollIn(toScroll)};
+      collapsible.addEventListener('shown.bs.collapse', scroll, { once: true });
+      collapsible.addEventListener('hidden.bs.collapse', () => {
+        collapsible.removeEventListener('shown.bs.collapse', scroll);
+      });
       bootstrap.Collapse.getInstance(collapsible).show();
-      collapsible.addEventListener('shown.bs.collapse', function() {
-        scrollIn(toScroll);
-      }, {once: true});
     } catch (e) {
       scrollIn(toScroll);
     }
-  } else {
-    scrollIn(toScroll);
   }
+  scrollIn(toScroll);
 }
 
 function scrollIn(id) {
