@@ -46,3 +46,14 @@ window.onscroll = function() {updateTableOfContentsHighlight()};
 function hideAdBanner() {
   document.getElementById('banner').hidden = true;
 }
+
+window.outlineOpen = false;
+
+function toggleOutline() {
+  window.outlineOpen = !window.outlineOpen;
+  if (outlineOpen) {
+    document.getElementById('outline-container').style.display = 'flex';
+  } else {
+    document.getElementById('outline-container').style.display = 'none';
+  }
+}

@@ -32,13 +32,13 @@ body {
     color: white;
   }
 
-  .outline {
+  #outline, .spaceholder {
     flex: 2;
     padding: 16px;
     background-color: #f2f2f2;
   }
 
-  .outline-container {
+  #outline-container {
     position: sticky;
     display: flex;
     flex-direction: column;
@@ -59,6 +59,48 @@ body {
     top: 60px;
     height: calc(100vh - 108px);
   }
+
+  #open-outline {
+    display: none;
+  }
+
+  .outline-section {
+    text-decoration: none;
+    color: black;
+    padding: 0px 8px;
+    margin: 2px;
+  }
+
+  .outline-section:hover {
+    background-color: #8c1a19;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .table-of-contents {
+    display: none;
+  }
+
+  .profile {
+    float: right;
+    max-width: 260px;
+    margin: 16px;
+  }
+
+  .search {
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 10px 5px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    max-width: 300px;
+    height: 32px
+  }
+
+  .header-container {
+    width: 100%; height: 48px; background-color: #8c1a19; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; box-sizing: border-box; position: fixed; top: 0; z-index: 1;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -66,12 +108,85 @@ body {
     display: none;
   } 
 
-  .outline {
+  #outline {
+    position: fixed;
+    right: 48px;
+    top: 96px;
+    z-index: 1;
+  }
+
+  #outline-container {
+    border-radius: 5px;
+    padding: 16px;
+    background-color: #f7e4c9;
     display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
   }
 
   .related {
     display: none;
+  }
+
+  #open-outline {
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    padding: 6px 0px 0px 0px;
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #8c1a19;
+    color: white;
+  }
+
+  .outline-section {
+    text-decoration: none;
+    color: #8c1a19;
+    padding: 0px 8px;
+    margin: 2px;
+  }
+
+  .table-of-contents {
+    background-color: #f7e4c9;
+    width: 300px;
+    padding: 8px 0px;
+    border-radius: 3px;
+    margin: 36px 0px 48px;
+  }
+  
+  .table-of-contents-list {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    margin-left: 24px;
+  }
+
+  .profile {
+    max-width: 260px;
+    margin: auto;
+  }
+
+  .search {
+    display: none;
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 10px 5px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    max-width: 300px;
+    height: 32px
+  }
+
+  .header-container {
+    width: 100%; height: 48px; background-color: #8c1a19; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; box-sizing: border-box; position: fixed; top: 0; z-index: 1;
   }
 }
 
@@ -84,21 +199,6 @@ body {
 
 .navbar-option:hover, .navbar-title:hover {
   color: #ffddaa;
-}
-
-.search {
-  background-color: white;
-  background-image: url('search.png');
-  background-position: 10px 5px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-  max-width: 300px;
-  height: 32px
-}
-
-.header-container {
-  width: 100%; height: 48px; background-color: #8c1a19; display: flex; align-items: center; justify-content: space-between; padding: 0px 20px; box-sizing: border-box; position: fixed; top: 0; z-index: 1;
 }
 
 .header-options {
@@ -117,18 +217,12 @@ body {
 
 .article {
   flex: 7;
-  padding: 16px;
+  padding: 24px;
 }
 
 .profile-image {
   max-width: 250px;
   display: block;
-}
-
-.profile {
-  float: right;
-  max-width: 260px;
-  margin: 16px;
 }
 
 .article-title {
@@ -189,19 +283,6 @@ p {
   scroll-margin-top: 60px;
 }
 
-.outline-section {
-  text-decoration: none;
-  color: black;
-  padding: 0px 8px;
-  margin: 2px;
-}
-
-.outline-section:hover {
-  background-color: #8c1a19;
-  border-radius: 5px;
-  color: white;
-}
-
 .active {
   background-color: #ba7575;
   border-radius: 5px;
@@ -241,12 +322,14 @@ p {
 
 #banner {
   position: fixed;
+  z-index: 1;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   border-width: 2px;
   border-style: solid;
   border-color: black;
+  max-width: 100%;
 }
 
 .banner-image {
