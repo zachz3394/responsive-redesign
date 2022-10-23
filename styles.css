@@ -58,6 +58,8 @@ body {
     position: sticky;
     top: 60px;
     height: calc(100vh - 108px);
+    display: flex;
+    flex-direction: column;
   }
 
   #open-outline {
@@ -402,6 +404,7 @@ p {
   border-style: solid;
   border-color: black;
   overflow: hidden;
+  max-height: 100%;
 }
 
 .adlabel-2 {
